@@ -3,11 +3,21 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <title>ImJimmi | Procedural Parallax</title>
+        <link rel="shortcut icon" type="image/png" href="https://avatars3.githubusercontent.com/u/19873870?s=60&v=4"/>
 
-        <title>Procedural Parallax</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- https://github.com/josephg/noisejs -->
+        <script src='perlin.js'></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script>
     </head>
 
     <body>
-        <h1>Procedural Parallax</h1>
+        <canvas class="cnvs" id="cnvs-bg"></canvas>
+        <canvas class="cnvs" id="cnvs-mountains-1"></canvas>
+        <canvas class="cnvs" id="cnvs-mountains-2"></canvas>
     </body>
 </html>
