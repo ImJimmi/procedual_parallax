@@ -16,8 +16,23 @@
     </head>
 
     <body>
-        <canvas class="cnvs" id="cnvs-bg"></canvas>
-        <canvas class="cnvs" id="cnvs-mountains-1"></canvas>
-        <canvas class="cnvs" id="cnvs-mountains-2"></canvas>
+        <canvas id="cnvs" height="1000"></canvas>
+
+        <div id="content">
+            <div style="padding: 3rem;">
+                <h1>Procedural Parallax</h1>
+                <p>This page uses an HTML5 canvas, simplex noise, and some crappy JavaScript code to render multiple layers that all scroll at different speeds to create the pseudo-3D effect.</p>
+            
+                <div style="margin-top: 3rem">
+                    <p>The simplex noise is calculated using this GitHub repo:</p>
+                    <a href="https://github.com/josephg/noisejs">noisejs</a>
+                </div>
+
+                <div style="margin-top: 3rem;">
+                    <p>View the full code for this page on GitHub:</p>
+                    <a href="https://github.com/ImJimmi/procedural_parallax/tree/gh-pages" target="_blank">Procedural Parallax</a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

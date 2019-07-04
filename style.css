@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -5,13 +7,34 @@ body {
     width: 100vw;
     height: 100vh;
 
-    background-color: #DCDAD5;
+    background-color: #1C2A2B;
+    color: #ACC0C6;
+
+    overflow-x: hidden;
+
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.05rem;
+    text-align: center;
 }
 
-.cnvs {
-    width: 100%;
-    height: 100%;
+#content {
+    margin: 0;
+    padding: 0;
 
-    position: absolute;
-    z-index: -100;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+
+    margin-top: 0;
+    margin-bottom: 3rem;
+    color: #DCDAD5;
+}
+
+a {
+    color: #66919D;
 }
