@@ -38,3 +38,10 @@ h1 {
 a {
     color: #66919D;
 }
+
+#forest {
+    max-width: 500px;
+    height: auto;
+
+    border: 1px solid black;
+}

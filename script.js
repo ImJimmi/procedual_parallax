@@ -198,24 +198,4 @@ $(function() {
         ctx.fillStyle = "#DCDAD5";
         ctx.fillRect(0, 0, width, height);
     }
-
-    function paintTrees(cnvs, index) {
-        var ctx = cnvs.getContext("2d");
-        ctx.beginPath();
-
-        var diff = baselines[index + 3] - baselines[index + 2];
-        var grad = ctx.createLinearGradient(0, baselines[index + 2] * height,
-                                            0, (baselines[index + 3] + diff) * height);
-        
-        if (index === 0) {
-            grad.addColorStop(0, "#ACC0C6");
-            grad.addColorStop(1, "#DCDAD5");
-        } else if (index === 1) {
-            grad.addColorStop(0, "#66919D");
-            grad.addColorStop(1, "#ACC0C6");
-        }
-
-        ctx.fillStyle = grad;
-        ctx.fill();
-    }
 });
