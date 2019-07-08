@@ -52,15 +52,9 @@ $(function() {
             ctx.closePath();
     
             var grad;
-
-            if (this.index !== baselines.length - 1) {
-                var diff = baselines[this.index + 1] - baselines[this.index];
-                grad = ctx.createLinearGradient(0, baselines[this.index] * height,
-                                                0, (baselines[this.index + 1] + diff) * height);
-            } else {
-                grad = ctx.createLinearGradient(0, baselines[this.index] * height,
-                                                0, height);
-            }
+            var gradStart = baselines[this.index] * height;
+            grad = ctx.createLinearGradient(0, gradStart,
+                                            0, gradStart + 100);
             
             if (this.index === 0) {
                 grad.addColorStop(0, "#ACC0C6");
@@ -184,9 +178,10 @@ $(function() {
         var proportion = $(window).scrollTop() / $(window).innerHeight();
 
         var norms = [0.3, 0.4, 0.5, 0.6];
+        var targets = [1.0, 0.967, 0.933, 0.9];
 
         for (var i = 0; i < norms.length; i++) {
-            baselines[i] = norms[i] + (1 - norms[i]) * proportion * 0.8;
+            baselines[i] = targets[i] * proportion + norms[i] * (1 - proportion);
         }
 
         repaint();
